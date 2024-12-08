@@ -1,0 +1,19 @@
+runtime: nodejs18
+instance_class: F1
+env: standard
+
+handlers:
+  - url: /favicon\.png
+    static_files: favicon.png
+    upload: favicon\.png
+  - url: /src/styles
+    static_dir: src/styles
+  - url: /src/scripts
+    static_dir: src/scripts
+  - url: /src/images
+    static_dir: src/images
+  - url: /
+    static_files: index.html
+    upload: index.html
+  - url: /.*
+    script: auto
